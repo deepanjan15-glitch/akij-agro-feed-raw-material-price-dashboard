@@ -1,0 +1,874 @@
+{
+ "signals": [
+  {
+   "productId": "MAT-001",
+   "product": "MAIZE/CORN",
+   "signal": "HIGH_COST",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "MAIZE/CORN sourcing (Brazil) is materially above the cheapest origin.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-002",
+   "product": "CORN FOB",
+   "signal": "HIGH_COST",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "CORN FOB sourcing (Brazil) is materially above the cheapest origin.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-003",
+   "product": "CORN CIF",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "CORN CIF sourced from Brazil needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-004",
+   "product": "CORN BASIS",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "CORN BASIS sourced from Brazil needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-005",
+   "product": "CORN FAS",
+   "signal": "OPTIMAL",
+   "label": "GO",
+   "color": "success",
+   "icon": "check-circle",
+   "description": "CORN FAS is already sourced from the cheapest origin (Brazil).",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-006",
+   "product": "CORN CPT",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "CORN CPT sourced from Brazil needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-007",
+   "product": "Corn DDG CIF",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "Corn DDG CIF sourced from Brazil needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-008",
+   "product": "Corn DDG FOB",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "Corn DDG FOB sourced from unassigned origin needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-009",
+   "product": "SOYMEAL CIF",
+   "signal": "HIGH_COST",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "SOYMEAL CIF sourcing (Brazil) is materially above the cheapest origin.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-010",
+   "product": "SOYMEAL CIF Hi-Pro",
+   "signal": "HIGH_COST",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "SOYMEAL CIF Hi-Pro sourcing (Brazil) is materially above the cheapest origin.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-011",
+   "product": "SOYMEAL CIF SMP",
+   "signal": "OPTIMAL",
+   "label": "GO",
+   "color": "success",
+   "icon": "check-circle",
+   "description": "SOYMEAL CIF SMP is already sourced from the cheapest origin (Brazil).",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-012",
+   "product": "SOYMEAL FOB Hi-Pro",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "SOYMEAL FOB Hi-Pro sourced from Brazil needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-013",
+   "product": "SOYMEAL FOB",
+   "signal": "ACCEPTABLE",
+   "label": "GO",
+   "color": "success",
+   "icon": "check-circle",
+   "description": "SOYMEAL FOB sourcing (Brazil) is within an acceptable premium of the cheapest origin.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-014",
+   "product": "SOYMEAL FOB SMP",
+   "signal": "OPTIMAL",
+   "label": "GO",
+   "color": "success",
+   "icon": "check-circle",
+   "description": "SOYMEAL FOB SMP is already sourced from the cheapest origin (Brazil).",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-015",
+   "product": "SOYMEAL CBOT",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "SOYMEAL CBOT sourced from Brazil needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-016",
+   "product": "SOYMEAL BASIS",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "SOYMEAL BASIS sourced from Brazil needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-017",
+   "product": "SOYBEAN ORGANIC FEED",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "SOYBEAN ORGANIC FEED sourced from Brazil needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-018",
+   "product": "SOYBEAN BASIS",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "SOYBEAN BASIS sourced from Brazil needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-019",
+   "product": "Soybean CBOT",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "Soybean CBOT sourced from Brazil needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-020",
+   "product": "Soybean CFR",
+   "signal": "OPTIMAL",
+   "label": "GO",
+   "color": "success",
+   "icon": "check-circle",
+   "description": "Soybean CFR is already sourced from the cheapest origin (Brazil).",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-021",
+   "product": "Soybean CIF",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "Soybean CIF sourced from Brazil needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-022",
+   "product": "SOYBEAN FOB",
+   "signal": "MONITOR",
+   "label": "MONITOR",
+   "color": "warning",
+   "icon": "alert-circle",
+   "description": "SOYBEAN FOB sourcing (Brazil) carries a modest premium — monitor the alternative origin.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-023",
+   "product": "Soybean FAS",
+   "signal": "OPTIMAL",
+   "label": "GO",
+   "color": "success",
+   "icon": "check-circle",
+   "description": "Soybean FAS is already sourced from the cheapest origin (Brazil).",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-024",
+   "product": "Soybean Feed",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "Soybean Feed sourced from Brazil needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-025",
+   "product": "SOYBEAN OIL CFR Crude",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "SOYBEAN OIL CFR Crude sourced from Brazil needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-026",
+   "product": "SOYBEAN OIL FOB Crude",
+   "signal": "ACCEPTABLE",
+   "label": "GO",
+   "color": "success",
+   "icon": "check-circle",
+   "description": "SOYBEAN OIL FOB Crude sourcing (Brazil) is within an acceptable premium of the cheapest origin.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-027",
+   "product": "SOYBEAN OIL FOB Refined",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "SOYBEAN OIL FOB Refined sourced from Brazil needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-028",
+   "product": "ANIMAL FEED",
+   "signal": "HIGH_COST",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "ANIMAL FEED sourcing (Brazil) is materially above the cheapest origin.",
+   "source": "Volza"
+  },
+  {
+   "productId": "MAT-029",
+   "product": "WHEAT BRAN",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT BRAN sourced from Nigeria needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-030",
+   "product": "DDGS",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "DDGS sourced from Nigeria needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-031",
+   "product": "L-METHIONINE",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "L-METHIONINE sourced from China needs supplier review amid unclear pricing signals.",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-032",
+   "product": "MONO CALCIUM PHOSPHATE (MCP)",
+   "signal": "OPTIMAL",
+   "label": "GO",
+   "color": "success",
+   "icon": "check-circle",
+   "description": "MONO CALCIUM PHOSPHATE (MCP) is already sourced from the cheapest origin (China).",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-033",
+   "product": "DICALCIUM PHOSPHATE (DCP)",
+   "signal": "HIGH_COST",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "DICALCIUM PHOSPHATE (DCP) sourcing (China) is materially above the cheapest origin.",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-034",
+   "product": "CORN GLUTEN FEED",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "CORN GLUTEN FEED sourced from India needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-035",
+   "product": "PH RAW MATERIALS",
+   "signal": "OPTIMAL",
+   "label": "GO",
+   "color": "success",
+   "icon": "check-circle",
+   "description": "PH RAW MATERIALS is already sourced from the cheapest origin (China).",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-036",
+   "product": "RAPESEED Meal (RSM)",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "RAPESEED Meal (RSM) sourced from India needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-037",
+   "product": "RAPESEED / CANOLA CPT",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "RAPESEED / CANOLA CPT sourced from India needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-038",
+   "product": "RAPESEED / CANOLA FOB",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "RAPESEED / CANOLA FOB sourced from India needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-039",
+   "product": "RAPESEED OIL FOB Refined",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "RAPESEED OIL FOB Refined sourced from India needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-040",
+   "product": "RAPESEED EXTRACT",
+   "signal": "OPTIMAL",
+   "label": "GO",
+   "color": "success",
+   "icon": "check-circle",
+   "description": "RAPESEED EXTRACT is already sourced from the cheapest origin (India).",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-041",
+   "product": "WHEAT CBOT",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT CBOT sourced from India needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-042",
+   "product": "WHEAT 10%",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT 10% sourced from India needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-043",
+   "product": "WHEAT CBOT 10.5%",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT CBOT 10.5% sourced from India needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-044",
+   "product": "WHEAT CBOT 11.5%",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT CBOT 11.5% sourced from India needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-045",
+   "product": "WHEAT CBOT 12.5%",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT CBOT 12.5% sourced from India needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-046",
+   "product": "WHEAT AND WHEAT BRAN CBOT 13.5%",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT AND WHEAT BRAN CBOT 13.5% sourced from India needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-047",
+   "product": "WHEAT CBOT 14.5%",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT CBOT 14.5% sourced from India needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-048",
+   "product": "WHEAT FEED",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT FEED sourced from India needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-049",
+   "product": "WHEAT FOB 10%",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT FOB 10% sourced from Ukraine needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-050",
+   "product": "WHEAT FOB 10.5%",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT FOB 10.5% sourced from Ukraine needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-051",
+   "product": "WHEAT FOB 11%",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT FOB 11% sourced from Ukraine needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-052",
+   "product": "WHEAT FOB 11.5%",
+   "signal": "OPTIMAL",
+   "label": "GO",
+   "color": "success",
+   "icon": "check-circle",
+   "description": "WHEAT FOB 11.5% is already sourced from the cheapest origin (Ukraine).",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-053",
+   "product": "WHEAT FOB 12.5%",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT FOB 12.5% sourced from Ukraine needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-054",
+   "product": "WHEAT FOB 13.5%",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT FOB 13.5% sourced from Ukraine needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-055",
+   "product": "WHEAT FOB 14.5%",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT FOB 14.5% sourced from Ukraine needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-056",
+   "product": "WHEAT FOB 9.5%",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT FOB 9.5% sourced from Ukraine needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-057",
+   "product": "WHEAT CIF 10.5%",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT CIF 10.5% sourced from Ukraine needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-058",
+   "product": "WHEAT CIF 11.5%",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT CIF 11.5% sourced from Ukraine needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-059",
+   "product": "WHEAT CIF 12.5%",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT CIF 12.5% sourced from Ukraine needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-060",
+   "product": "WHEAT CIF 13.5%",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT CIF 13.5% sourced from Ukraine needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-061",
+   "product": "WHEAT CIF 14.5%",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT CIF 14.5% sourced from Ukraine needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-062",
+   "product": "WHEAT CIF Feed",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT CIF Feed sourced from Ukraine needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-063",
+   "product": "WHEAT FOB Midds",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "WHEAT FOB Midds sourced from Ukraine needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-064",
+   "product": "BERLEY",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "BERLEY sourced from unassigned origin needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-065",
+   "product": "COTTON SEED OIL",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "COTTON SEED OIL sourced from United States of America needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-066",
+   "product": "CORN GLUTEN MEAL",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "CORN GLUTEN MEAL sourced from Brazil needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-067",
+   "product": "SUNFLOWER MEAL",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "SUNFLOWER MEAL sourced from unassigned origin needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-068",
+   "product": "Fish Oil",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "Fish Oil sourced from unassigned origin needs supplier review amid unclear pricing signals.",
+   "source": "Fastmarkets"
+  },
+  {
+   "productId": "MAT-069",
+   "product": "L-THREONINE",
+   "signal": "OPTIMAL",
+   "label": "GO",
+   "color": "success",
+   "icon": "check-circle",
+   "description": "L-THREONINE is already sourced from the cheapest origin (China).",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-070",
+   "product": "L-LYSINE",
+   "signal": "HIGH_COST",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "L-LYSINE sourcing (China) is materially above the cheapest origin.",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-071",
+   "product": "L-LYSINE",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "L-LYSINE sourced from unassigned origin needs supplier review amid unclear pricing signals.",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-072",
+   "product": "L-THREONINE",
+   "signal": "OPTIMAL",
+   "label": "GO",
+   "color": "success",
+   "icon": "check-circle",
+   "description": "L-THREONINE is already sourced from the cheapest origin (China).",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-073",
+   "product": "CHOLINE CHLORIDE",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "CHOLINE CHLORIDE sourced from unassigned origin needs supplier review amid unclear pricing signals.",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-074",
+   "product": "DL-METHIONINE",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "DL-METHIONINE sourced from unassigned origin needs supplier review amid unclear pricing signals.",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-075",
+   "product": "FEED PREMIX",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "FEED PREMIX sourced from unassigned origin needs supplier review amid unclear pricing signals.",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-076",
+   "product": "FEED SUPPLEMENT (LIQUID)",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "FEED SUPPLEMENT (LIQUID) sourced from unassigned origin needs supplier review amid unclear pricing signals.",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-077",
+   "product": "FEED SUPPLEMENT (POWDER)",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "FEED SUPPLEMENT (POWDER) sourced from unassigned origin needs supplier review amid unclear pricing signals.",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-078",
+   "product": "FEED SUPPLEMENT (OTHER)",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "FEED SUPPLEMENT (OTHER) sourced from unassigned origin needs supplier review amid unclear pricing signals.",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-079",
+   "product": "FISH MEAL",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "FISH MEAL sourced from unassigned origin needs supplier review amid unclear pricing signals.",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-080",
+   "product": "OTHER PROTEIN / MEAL",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "OTHER PROTEIN / MEAL sourced from unassigned origin needs supplier review amid unclear pricing signals.",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-081",
+   "product": "POULTRY MEAL",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "POULTRY MEAL sourced from unassigned origin needs supplier review amid unclear pricing signals.",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-082",
+   "product": "SHRIMP MEAL",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "SHRIMP MEAL sourced from unassigned origin needs supplier review amid unclear pricing signals.",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-083",
+   "product": "AMINO ACID (FEED)",
+   "signal": "HIGH_COST",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "AMINO ACID (FEED) sourcing (China) is materially above the cheapest origin.",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-084",
+   "product": "FEED ADDITIVE",
+   "signal": "HIGH_COST",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "FEED ADDITIVE sourcing (China) is materially above the cheapest origin.",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-085",
+   "product": "LIMESTONE POWDER",
+   "signal": "OPTIMAL",
+   "label": "GO",
+   "color": "success",
+   "icon": "check-circle",
+   "description": "LIMESTONE POWDER is already sourced from the cheapest origin (Egypt).",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-086",
+   "product": "TAPIOCA RESIDUE PELLETS",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "TAPIOCA RESIDUE PELLETS sourced from unassigned origin needs supplier review amid unclear pricing signals.",
+   "source": "NBR Data"
+  },
+  {
+   "productId": "MAT-087",
+   "product": "SOYBEAN FLOUR",
+   "signal": "REVIEW",
+   "label": "RISK",
+   "color": "danger",
+   "icon": "alert-triangle",
+   "description": "SOYBEAN FLOUR sourced from unassigned origin needs supplier review amid unclear pricing signals.",
+   "source": "NBR Data"
+  }
+ ]
+}

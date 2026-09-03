@@ -1,0 +1,182 @@
+// ==========================================================================
+// state.js — central data store + filter application
+// ==========================================================================
+
+export const AppState = {
+  raw: null,          // all loaded JSON data
+  filtered: [],        // filtered products array
+  priceBounds: { min: 0, max: 3500 }, // computed once from data in initFilters()
+  filters: {
+    category: [],       // multi-select — empty array = "all"
+    origin: [],          // multi-select
+    risk: [],             // multi-select
+    action: [],            // multi-select
+    source: [],            // multi-select — data source demarcation (Fastmarkets / NBR Data / Volza)
+    currency: "USD",
+    year: "all",
+    quarter: "all",
+    month: "all",
+    priceMin: 0,
+    priceMax: 3500,
+    dependency: "all",
+    search: "",
+  },
+  theme: "light",
+  sidebarCollapsed: false,
+  tablePage: 1,
+  tablePageSize: 8,
+  tableSort: { key: "product", dir: "asc" },
+  recTablePage: 1,
+  dataReady: false,
+};
+
+const listeners = new Set();
+export function onStateChange(fn) { listeners.add(fn); }
+export function emitStateChange() { listeners.forEach((fn) => fn(AppState)); }
+
+// Category buckets — simple heuristic classification of the 85 tracked materials
+const CATEGORY_MAP = {
+  "MAIZE/CORN": "Grains & Cereals",
+  "CORN FOB": "Grains & Cereals",
+  "CORN CIF": "Grains & Cereals",
+  "CORN BASIS": "Grains & Cereals",
+  "CORN FAS": "Grains & Cereals",
+  "CORN CPT": "Grains & Cereals",
+  "Corn DDG CIF": "Grains & Cereals",
+  "Corn DDG FOB": "Grains & Cereals",
+  "WHEAT BRAN": "Grains & Cereals",
+  "DDGS": "Grains & Cereals",
+  "CORN GLUTEN FEED": "Grains & Cereals",
+  "CORN GLUTEN MEAL": "Grains & Cereals",
+  "WHEAT CBOT": "Grains & Cereals",
+  "WHEAT 10%": "Grains & Cereals",
+  "WHEAT CBOT 10.5%": "Grains & Cereals",
+  "WHEAT CBOT 11.5%": "Grains & Cereals",
+  "WHEAT CBOT 12.5%": "Grains & Cereals",
+  "WHEAT AND WHEAT BRAN CBOT 13.5%": "Grains & Cereals",
+  "WHEAT CBOT 14.5%": "Grains & Cereals",
+  "WHEAT FEED": "Grains & Cereals",
+  "WHEAT FOB 10%": "Grains & Cereals",
+  "WHEAT FOB 10.5%": "Grains & Cereals",
+  "WHEAT FOB 11%": "Grains & Cereals",
+  "WHEAT FOB 11.5%": "Grains & Cereals",
+  "WHEAT FOB 12.5%": "Grains & Cereals",
+  "WHEAT FOB 13.5%": "Grains & Cereals",
+  "WHEAT FOB 14.5%": "Grains & Cereals",
+  "WHEAT FOB 9.5%": "Grains & Cereals",
+  "WHEAT CIF 10.5%": "Grains & Cereals",
+  "WHEAT CIF 11.5%": "Grains & Cereals",
+  "WHEAT CIF 12.5%": "Grains & Cereals",
+  "WHEAT CIF 13.5%": "Grains & Cereals",
+  "WHEAT CIF 14.5%": "Grains & Cereals",
+  "WHEAT CIF Feed": "Grains & Cereals",
+  "WHEAT FOB Midds": "Grains & Cereals",
+  "BERLEY": "Grains & Cereals",
+  "SOYMEAL CIF": "Oilseeds & Meals",
+  "SOYMEAL CIF Hi-Pro": "Oilseeds & Meals",
+  "SOYMEAL CIF SMP": "Oilseeds & Meals",
+  "SOYMEAL FOB Hi-Pro": "Oilseeds & Meals",
+  "SOYMEAL FOB": "Oilseeds & Meals",
+  "SOYMEAL FOB SMP": "Oilseeds & Meals",
+  "SOYMEAL CBOT": "Oilseeds & Meals",
+  "SOYMEAL BASIS": "Oilseeds & Meals",
+  "SOYBEAN ORGANIC FEED": "Oilseeds & Meals",
+  "SOYBEAN BASIS": "Oilseeds & Meals",
+  "Soybean CBOT": "Oilseeds & Meals",
+  "Soybean CFR": "Oilseeds & Meals",
+  "Soybean CIF": "Oilseeds & Meals",
+  "SOYBEAN FOB": "Oilseeds & Meals",
+  "Soybean FAS": "Oilseeds & Meals",
+  "Soybean Feed": "Oilseeds & Meals",
+  "RAPESEED Meal (RSM)": "Oilseeds & Meals",
+  "RAPESEED / CANOLA CPT": "Oilseeds & Meals",
+  "RAPESEED / CANOLA FOB": "Oilseeds & Meals",
+  "RAPESEED EXTRACT": "Oilseeds & Meals",
+  "SUNFLOWER MEAL": "Oilseeds & Meals",
+  "SOYBEAN OIL CFR Crude": "Oils & Fats",
+  "SOYBEAN OIL FOB Crude": "Oils & Fats",
+  "SOYBEAN OIL FOB Refined": "Oils & Fats",
+  "RAPESEED OIL FOB Refined": "Oils & Fats",
+  "COTTON SEED OIL": "Oils & Fats",
+  "Fish Oil": "Oils & Fats",
+  "ANIMAL FEED": "Compound Feed",
+  "MONO CALCIUM PHOSPHATE (MCP)": "Minerals",
+  "DICALCIUM PHOSPHATE (DCP)": "Minerals",
+  "LIMESTONE POWDER": "Minerals",
+  "L-METHIONINE": "Amino Acids",
+  "PH RAW MATERIALS": "Amino Acids",
+  "L-THREONINE": "Amino Acids",
+  "L-LYSINE": "Amino Acids",
+  "DL-METHIONINE": "Amino Acids",
+  "AMINO ACID (FEED)": "Amino Acids",
+  "CHOLINE CHLORIDE": "Additives",
+  "FEED ADDITIVE": "Additives",
+  "FEED PREMIX": "Additives",
+  "FEED SUPPLEMENT (LIQUID)": "Protein Meals & Supplements",
+  "FEED SUPPLEMENT (POWDER)": "Protein Meals & Supplements",
+  "FEED SUPPLEMENT (OTHER)": "Protein Meals & Supplements",
+  "FISH MEAL": "Protein Meals & Supplements",
+  "OTHER PROTEIN / MEAL": "Protein Meals & Supplements",
+  "POULTRY MEAL": "Protein Meals & Supplements",
+  "SHRIMP MEAL": "Protein Meals & Supplements",
+  "TAPIOCA RESIDUE PELLETS": "Grains & Cereals",
+  "SOYBEAN FLOUR": "Oilseeds & Meals",
+};
+
+export function categoryOf(productName) {
+  return CATEGORY_MAP[productName] || "Other";
+}
+
+// Helper: true if a multi-select filter (array, empty = "all") permits value v
+function permits(selection, v) {
+  return !selection || selection.length === 0 || selection.includes(v);
+}
+
+export function applyFilters() {
+  const { products } = AppState.raw.products;
+  const f = AppState.filters;
+
+  AppState.filtered = products.filter((p) => {
+    if (!permits(f.category, categoryOf(p.product))) return false;
+    if (!permits(f.origin, p.akijSourcingCountry)) return false;
+    if (!permits(f.risk, p.riskSignal)) return false;
+    if (!permits(f.action, p.procurementAction)) return false;
+    if (!permits(f.source, p.source)) return false;
+    if (f.dependency === "single" && p.cheapestCountry2 && p.cheapestCountry2 !== "-") return false;
+    if (f.dependency === "multi" && !(p.cheapestCountry2 && p.cheapestCountry2 !== "-")) return false;
+
+    const price = p.currentAvgPrice ?? p.lastWeekPrice ?? 0;
+    if (price < f.priceMin || price > f.priceMax) return false;
+
+    if (f.search) {
+      const s = f.search.toLowerCase();
+      const hay = `${p.product} ${p.hsCode} ${p.akijSourcingCountry} ${p.bestBuyCountry} ${p.source ?? ""}`.toLowerCase();
+      if (!hay.includes(s)) return false;
+    }
+    return true;
+  });
+
+  emitStateChange();
+}
+
+export function resetFilters() {
+  AppState.filters = {
+    category: [], origin: [], risk: [], action: [], source: [],
+    currency: "USD", year: "all", quarter: "all", month: "all",
+    priceMin: AppState.priceBounds.min, priceMax: AppState.priceBounds.max,
+    dependency: "all", search: "",
+  };
+  applyFilters();
+}
+
+export function activeFilterCount() {
+  const f = AppState.filters;
+  let n = f.category.length + f.origin.length + f.risk.length + f.action.length + f.source.length;
+  if (f.year !== "all") n++;
+  if (f.quarter !== "all") n++;
+  if (f.month !== "all") n++;
+  if (f.dependency !== "all") n++;
+  if (f.search) n++;
+  if (f.priceMin > AppState.priceBounds.min || f.priceMax < AppState.priceBounds.max) n++;
+  return n;
+}

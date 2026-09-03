@@ -1,0 +1,24 @@
+{
+ "insights": [
+  {
+   "title": "Portfolio tracks 87 materials across two data sources",
+   "text": "The tracked universe now covers 87 raw materials — 62 sourced from Fastmarkets (exchange-assessed physical pricing) and 24 from NBR customs import data, plus 1 from Volza — averaging +10.5% week-on-week."
+  },
+  {
+   "title": "FEED ADDITIVE leads, WHEAT BRAN trails WoW",
+   "text": "FEED ADDITIVE posted the sharpest weekly gain at +330.4%, while WHEAT BRAN fell -40.0% WoW."
+  },
+  {
+   "title": "LIMESTONE POWDER cheapest, L-METHIONINE most expensive",
+   "text": "LIMESTONE POWDER is the lowest-priced tracked material at ~$62/MT, while L-METHIONINE is the most expensive at ~$4,950/MT."
+  },
+  {
+   "title": "9 materials confirmed high-cost, 63 flagged for review",
+   "text": "9 materials carry a confirmed High Cost signal versus alternative sourcing (MAIZE/CORN, CORN FOB, SOYMEAL CIF, SOYMEAL CIF Hi-Pro, ANIMAL FEED, DICALCIUM PHOSPHATE (DCP)…), while 63 additional materials are flagged for supplier review."
+  },
+  {
+   "title": "Source demarcation: Fastmarkets 62 · NBR Data 24",
+   "text": "Fastmarkets provides transparent exchange-assessed physical quotes (62 materials — grains, oilseeds, meals, vegetable oils), while NBR customs data covers 24 additives, amino acids, minerals and feed supplements at actual Bangladesh landed-import values."
+  }
+ ]
+}
